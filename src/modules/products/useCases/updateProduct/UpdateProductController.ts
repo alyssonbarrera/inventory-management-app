@@ -8,6 +8,12 @@ class UpdateProductController {
     request: FastifyRequest,
     reply: FastifyReply,
   ): Promise<FastifyReply> {
+    const { id } = request.params as { id: string }
+
+    if (!id) {
+      return reply.status(400).send({ error: 'Missing id' })
+    }
+
     const updateProductBodySchema = z.object({
       title: z.string().optional(),
       description: z.string().optional(),
@@ -16,11 +22,6 @@ class UpdateProductController {
     })
 
     const data = updateProductBodySchema.parse(request.body)
-    const { id } = request.params as { id: string }
-
-    if (!id) {
-      return reply.status(400).send({ error: 'Missing id' })
-    }
 
     const keys = Object.keys(data)
 

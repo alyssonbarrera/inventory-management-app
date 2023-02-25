@@ -1,12 +1,6 @@
+import { ICreateProductDTO } from '@modules/products/dtos/ICreateProductDTO'
 import { inject, injectable } from 'tsyringe'
 import { IProductsRepository } from '../../repositories/IProductsRepository'
-
-interface IRequest {
-  title: string
-  description: string
-  price: number
-  amount: number
-}
 
 @injectable()
 class CreateProductUseCase {
@@ -15,7 +9,7 @@ class CreateProductUseCase {
     private productsRepository: IProductsRepository,
   ) {}
 
-  async execute(data: IRequest) {
+  async execute(data: ICreateProductDTO) {
     return await this.productsRepository.create(data)
   }
 }

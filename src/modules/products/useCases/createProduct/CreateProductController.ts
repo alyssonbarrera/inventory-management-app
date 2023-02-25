@@ -1,7 +1,7 @@
+import { z } from 'zod'
 import { container } from 'tsyringe'
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { CreateProductUseCase } from './CreateProductUseCase'
-import { z } from 'zod'
 
 class CreateProductController {
   async handle(

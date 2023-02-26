@@ -1,5 +1,5 @@
 import { inject, injectable } from 'tsyringe'
-import { IRegistersRepository } from '@modules/register/repositories/IRegistersRepository'
+import { IRegistersRepository } from '@modules/registers/repositories/IRegistersRepository'
 
 @injectable()
 class ListRegistersUseCase {

@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/shared/infra/http/server.ts",
     "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
-    "lint": "eslint src --ext .ts --fix",
-    "test": "vitest"
+    "lint": "eslint src --ext .ts --fix"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +16,6 @@
     "@types/node": "^18.14.1",
     "babel-plugin-module-resolver": "^5.0.0",
     "eslint": "^8.34.0",
-    "supertest": "^6.3.3",
     "tsx": "^3.12.3",
     "typescript": "^4.9.5"
   },

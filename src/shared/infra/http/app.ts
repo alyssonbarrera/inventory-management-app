@@ -4,7 +4,7 @@ import '../../container/index'
 import fastify from 'fastify'
 
 import { productsRoutes } from './routes/products'
-import { registerRoutes } from './routes/register'
+import { registerRoutes } from './routes/registers'
 import { AppError } from '@shared/errors/AppError'
 
 const app = fastify()

@@ -1,10 +1,10 @@
 /* eslint-disable camelcase */
 import { randomUUID } from 'crypto'
 import { knex } from '@shared/infra/knex/database'
-import { ICreateRegisterDTO } from '@modules/register/dtos/ICreateRegisterDTO'
-import { IRegistersResponseDTO } from '@modules/register/dtos/IRegistersResponseDTO'
-import { IUpdateRegisterDTO } from '@modules/register/dtos/IUpdateRegisterDTO'
-import { IRegistersRepository } from '@modules/register/repositories/IRegistersRepository'
+import { ICreateRegisterDTO } from '@modules/registers/dtos/ICreateRegisterDTO'
+import { IRegistersResponseDTO } from '@modules/registers/dtos/IRegistersResponseDTO'
+import { IUpdateRegisterDTO } from '@modules/registers/dtos/IUpdateRegisterDTO'
+import { IRegistersRepository } from '@modules/registers/repositories/IRegistersRepository'
 
 class RegistersRepository implements IRegistersRepository {
   async create(data: ICreateRegisterDTO): Promise<void> {

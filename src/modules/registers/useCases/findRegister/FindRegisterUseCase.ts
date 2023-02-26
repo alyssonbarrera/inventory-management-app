@@ -1,9 +1,9 @@
-import { inject, injectable } from 'tsyringe'
+import { IRegistersRepository } from '@modules/registers/repositories/IRegistersRepository'
 import { AppError } from '@shared/errors/AppError'
-import { IRegistersRepository } from '@modules/register/repositories/IRegistersRepository'
+import { inject, injectable } from 'tsyringe'
 
 @injectable()
-class DeleteRegisterUseCase {
+class FindRegisterUseCase {
   constructor(
     @inject('RegistersRepository')
     private registersRepository: IRegistersRepository,
@@ -16,8 +16,8 @@ class DeleteRegisterUseCase {
       throw new AppError('Register not found', 404)
     }
 
-    await this.registersRepository.delete(id)
+    return register
   }
 }
 
-export { DeleteRegisterUseCase }
+export { FindRegisterUseCase }

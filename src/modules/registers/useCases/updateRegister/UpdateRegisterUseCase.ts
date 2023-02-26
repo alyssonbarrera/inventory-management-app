@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe'
 import { AppError } from '@shared/errors/AppError'
-import { IRegistersRepository } from '@modules/register/repositories/IRegistersRepository'
+import { IRegistersRepository } from '@modules/registers/repositories/IRegistersRepository'
 import { IProductsRepository } from '@modules/products/repositories/IProductsRepository'
 
 interface IRequest {

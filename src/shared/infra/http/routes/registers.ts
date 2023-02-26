@@ -1,9 +1,9 @@
 import { FastifyInstance } from 'fastify'
-import { CreateRegisterController } from '@modules/register/useCases/createRegister/CreateRegisterController'
-import { ListRegistersController } from '@modules/register/useCases/listRegisters/ListRegistersController'
-import { FindRegisterController } from '@modules/register/useCases/findRegister/FindRegisterController'
-import { UpdateRegisterController } from '@modules/register/useCases/updateRegister/UpdateRegisterController'
-import { DeleteRegisterController } from '@modules/register/useCases/deleteRegister/DeleteRegisterController'
+import { CreateRegisterController } from '@modules/registers/useCases/createRegister/CreateRegisterController'
+import { ListRegistersController } from '@modules/registers/useCases/listRegisters/ListRegistersController'
+import { FindRegisterController } from '@modules/registers/useCases/findRegister/FindRegisterController'
+import { UpdateRegisterController } from '@modules/registers/useCases/updateRegister/UpdateRegisterController'
+import { DeleteRegisterController } from '@modules/registers/useCases/deleteRegister/DeleteRegisterController'
 
 const listRegisterController = new ListRegistersController()
 const createRegisterController = new CreateRegisterController()
